@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# Check user environment variable
+if [[ -z "${GOOGLE_CLOUD_PROJECT_ID}" ]]; then
+  echo "Missing GOOGLE_CLOUD_PROJECT_ID environment variable" >&2
+  exit 1
+fi
+
+firebase emulators:start --project $GOOGLE_CLOUD_PROJECT_ID
+ 

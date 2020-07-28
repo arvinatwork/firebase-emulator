@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  firestore_emulator:
+    build: emulators/firebase
+    environment:
+      - GOOGLE_CLOUD_PROJECT_ID=<firebase-project-id>
+    ports:
+      - 8095:4000 # UI Port
+      - 8090:8090 # Firestore Port
+      - 5001:5001 # Functions Port
+  pubsub_emulator:
+    build: emulators/pubsub
+    environment:
+      - GOOGLE_CLOUD_PROJECT_ID=<firebase-project-id>
+    ports:
+      - 8085:8085 # Pubsub Port
