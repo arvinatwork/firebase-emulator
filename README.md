@@ -1,5 +1,5 @@
 # Firebase UI, Firestore, Functions and PubSub emulators
-Firebase Emulators in containers
+Firebase Emulators in docker containers
 
 # Setup
 Set Firebase project id for key `GOOGLE_CLOUD_PROJECT_ID` in `docker-compose.yml`
